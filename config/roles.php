@@ -5,16 +5,10 @@ return [
         'name' => 'Super Admin',
         'modules' => [
             'users' => [
-                config('permissions.user_create'),
-                config('permissions.user_edit'),
-                config('permissions.user_delete'),
-                config('permissions.user_view'),
+                config('permissions.user_access'), config('permissions.user_create'), config('permissions.user_show'), config('permissions.user_edit'), config('permissions.user_delete'), 
             ],
             'settings' => [
-                config('permissions.settings_create'),
-                config('permissions.settings_edit'),
-                config('permissions.settings_delete'),
-                config('permissions.settings_view'),
+                config('permissions.setting_access'), config('permissions.setting_create'), config('permissions.setting_show'), config('permissions.setting_edit'), config('permissions.setting_delete'),
             ],
         ],
     ],
@@ -23,14 +17,10 @@ return [
         'name' => 'Admin',
         'modules' => [
             'users' => [
-                config('permissions.user_create'),
-                config('permissions.user_edit'),
-                config('permissions.user_view'),
+                config('permissions.user_access'), config('permissions.user_create'), config('permissions.user_show'), config('permissions.user_edit'), 
             ],
             'settings' => [
-                config('permissions.settings_create'),
-                config('permissions.settings_edit'),
-                config('permissions.settings_view'),
+                config('permissions.setting_access'), config('permissions.setting_create'), config('permissions.setting_show'), config('permissions.setting_edit'),
             ],
         ],
     ],
@@ -38,8 +28,8 @@ return [
     'user' => [
         'name' => 'User',
         'modules' => [
-            'users' => [config('permissions.user_view')],
-            'settings' => [config('permissions.settings_view')],
+            'users' => [config('permissions.user_show')],
+            'settings' => [config('permissions.setting_show')],
         ],
     ],
 ];
